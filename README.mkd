@@ -1,0 +1,44 @@
+HACKYBOT
+========
+
+SHELL SCRIPTING IS A SUITABLE ALTERNATIVE TO A FULLY FUNCTIONAL PROGRAMMING
+LANGUAGE
+
+THIS IMPLEMENTS A TRIVIAL IRC CLIENT USING BASH, TAIL, AND OPENSSL.
+
+IT'S RATHER BUGGY
+
+AND NOT COMPLETE
+
+AND ONLY USES OPENSSL
+
+BUT FOR GOD'S SAKE IT'S CALLED HACKYBOT
+
+**WHAT DID YOU EXPECT?**
+
+SO YOU WANT AN EXAMPLE?!?!?!?
+-----------------------------
+
+    #!/bin/bash
+
+    export HACKYSERVER=irc.example.com
+    export HACKYPORT=6697
+    export HACKYBOT="hackybot"
+
+    source hackybot.sh
+
+    initialize_bot
+    start_bot
+    wait_for_welcome
+
+    join "#hackybots"
+    privmsg "#hackybots" "HELLO MY FELLOW HACKYBOTS"
+
+    sleep 3
+
+    count=1
+    while :; do
+      echo -ne "$count\r"
+      sleep 1
+      let "count=$count+1"
+    done
